@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser"
 import connectToMongoDB from "./db/connectToMongodb.js"
 import authRoutes from './routes/auth.route.js'
 import messageRoutes from './routes/message.routes.js'
+import userRoutes from './routes/user.routes.js'
 dotenv.config()
 const app = express()
 
@@ -15,4 +16,5 @@ const PORT = process.env.PORT || 3000
 
 app.use("/api/auth", authRoutes);
 app.use("/api/message", messageRoutes);
+app.use("/api/user", userRoutes);
 app.listen(PORT, () => { console.log(`server has been conected on http://localhost:${PORT}`); connectToMongoDB()})
