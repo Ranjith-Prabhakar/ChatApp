@@ -1,0 +1,1 @@
+type npm init -y in the root , it will be easy while hosting
