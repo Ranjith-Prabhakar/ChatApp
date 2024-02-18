@@ -60,7 +60,6 @@ export const signup = async (req, res) => {
 };
 
 export const login = async (req, res) => {
-  res.send("hai")
   try {
     const { username, password } = req.body;
     const user = await User.findOne({ username });
@@ -85,7 +84,6 @@ export const login = async (req, res) => {
 };
 
 export const logout = (req, res) => {
-  res.send("how are you")
   try {
     res.cookie("jwt", "", { maxAge: 0 });
     res.status(200).json({ message: "Logged out successfully" });
